@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --primary-color: #3a4052;
+}
 *{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html{
   font-size: 62.5%;
@@ -17,14 +24,13 @@ h6{
 }
 .navbar{
   width: 94%;
-  margin: auto;
-  height: 35%;
+  margin: 0 auto;
+  border: 5px solid green;
 }
 .header1{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 15vh;
 }
 .fonts{
   font-size: 2.5rem;
@@ -48,12 +54,15 @@ h6{
 .header1 h3{
   font-size: 1.5rem;
   font-weight: 600;
-  /* padding: 10px; */
 }
 .navbar1{
+  width: 94%;
+  margin: 0 auto;
   background-color: #f5f5f5;
+  border: 5px solid black;
   height: 15vh;
-
+  position: sticky;
+  position: -webkit-sticky;
 }
 .header2{
   width: 70%;
@@ -61,7 +70,6 @@ h6{
   height: 15vh;
   display: grid;
   align-items: center;
-  border: 5px solid black;
 }
 .header2 ul{
   list-style: none;
@@ -92,14 +100,84 @@ h6{
 .hidden-things{
   display: none;
 }
+.video-section{
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffff;
+}
+.video-container{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+background: var(--primary-color) url('../Images/backgroundimage.webp') no-repeat center center/cover;
+}
+.video-container video{
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video-container::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.text-section{
+  z-index: 10;
+  display: grid;
+  grid-gap: 30px;
+  width: 75%;
+  margin: auto;
+  padding: 20px;
+}
+.txt-1 img{
+  width: 15rem;
+}
+.text-section h2{
+  font-size: 7rem;
+  font-weight: 600;
+}
+.text-section h4{
+  font-size: 2rem;
+  font-weight: 600;
+}
+.btns button{
+  background-color: #0D66D0;
+  padding: 5px 15px;
+  margin: 0 10px;
+  border-radius: 15px;
+  color: #ffff;
+  font-weight: 600;
+}
+.btns .btn1{
+  background-color: transparent;
+  border: 2px solid white;
+}
+.arrow{
+  font-size: 3rem;
+  color: #0D66D0;
+}
 @media only screen and (max-width: 568px) {
-  .navbar{
-    height: 20vh;
-  }
-  .header1{
+  .navbar1{
+    height: 10vh;
     display: flex;
     align-items: center;
-    height: 20vh;
+    justify-content: center;
   }
   .header1 img{
     width: 20px;
@@ -115,17 +193,34 @@ h6{
   .mid{
     width: 100%;
   }
-  .none{
+  .header2{
     display: none;
   }
   .hidden-things{
+    height: 5vh;
     display: flex;
     justify-content: center;
     font-size: 1.3rem;
     font-weight: 800;
     align-content: center;
   }
+  .video-section{
+    height: 90%;
+  }
+  .text-section{
+    width: 90%;
+    margin: auto;
+  }
+  .text-section h2{
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+  .text-section h4{
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
 }
+
 @media only screen and (max-width: 966px) {
   .navbar1{
     height: 20vh;
@@ -141,5 +236,12 @@ h6{
   }
   .header2 button{
     width: 100%;
+  }
+  .video-section{
+    height: 80%;
+  }
+  .text-section h2{
+    font-size: 4rem;
+    font-weight: 600;
   }
 }
