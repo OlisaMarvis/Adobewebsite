@@ -10,8 +10,10 @@
 }
 html{
   font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  font-family: adobe-clean, Source Sans Pro, -apple-system, BlinkMacSystemFont,Segoe UI, Roboto, sans-serif;
+
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07); */
 }
 h1,
 h2,
@@ -24,11 +26,15 @@ h6{
 .main{
   width: 100%;
   margin: 0;
+  height: auto;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: white;
 }
 .navbar{
   width: 94%;
   margin: 0 auto;
-  border: 5px solid green;
 }
 .header1{
   display: flex;
@@ -54,20 +60,22 @@ h6{
   height: 7%;
   width: 7%;
 }
+.vado{
+  margin-top: 5rem;
+}
 .header1 h3{
   font-size: 1.5rem;
   font-weight: 600;
 }
 .navbar1{
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   background-color: #f5f5f5;
-  border: 5px solid black;
-  height: 15vh;
-  position: sticky;
-  position: -webkit-sticky;
+  height: auto;
 }
 .header2{
+  width: 70%;
+  margin: 0 auto;
   height: 15vh;
   display: grid;
   align-items: center;
@@ -75,7 +83,6 @@ h6{
 .header2 ul{
   list-style: none;
   padding: 0;
-  margin: 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
@@ -129,15 +136,6 @@ background: var(--primary-color) url('../Images/backgroundimage.webp') no-repeat
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.video-container::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
 }
 .text-section{
   z-index: 10;
@@ -206,7 +204,7 @@ background: var(--primary-color) url('../Images/backgroundimage.webp') no-repeat
   gap: 20px;
 }
 .adobe{
-  border: 5px solid pink;
+  /* border: 5px solid pink; */
   font-size: 1.6rem;
   font-weight: 500;
 }
@@ -272,7 +270,7 @@ background: var(--primary-color) url('../Images/backgroundimage.webp') no-repeat
   min-height: 100%;
   object-fit: cover;
 }
-.video-container1::after{
+/* .video-container1::after{
   content: '';
   position: absolute;
   top: 0;
@@ -281,7 +279,7 @@ background: var(--primary-color) url('../Images/backgroundimage.webp') no-repeat
   margin: 0 auto;
   height: 100%;
   background: rgba(0, 0, 0, 0.1);
-}
+} */
 .nine{
   width: 80%;
   margin: 0 auto;
@@ -372,45 +370,396 @@ font-weight: 500;
 h3.keluskar{
   color: rgba(0, 0, 0, 0.4);
 }
-
-@media only screen and (max-width: 966px) {
-.navbar1{
-  height: 20vh;
+.eleven{
+  background-color: #1E76E3;
+  color: #FFFFFF;
+  display: grid;
+  grid-gap: 50px;
+  padding: 80px;
+  margin-bottom: 15rem;
 }
-.header2{
-  height: 20vh;
-  width: 100%;
+.ready {
+  display: grid;
+  grid-gap: 5px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
 }
-.header2 ul{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-.header2 button{
-  width: 100%;
-}
-.video-section{
-  height: 80%;
-}
-.text-section h2{
-  font-size: 4rem;
+.ready h2{
+  font-size: 6rem;
   font-weight: 600;
 }
-.googleapple{
+.ready h3{
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.mainboxes{
+  width: 80%;
+  margin: 0 auto;
+}
+.twoboxes{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 100%;
+}
+.AdobeXD{
+  display: grid;
+  grid-gap: 30px;
+  border-radius: 10px;
+  padding: 2rem;
+  justify-items: flex-start;
+  background-color: #00449D;
+  width: 100%;
+}
+.AdobeXD h3{
+  font-size: 3rem;
+  font-weight: 700;
+}
+.AdobeXD h4{
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.AdobeXD1{
+  display: grid;
+  grid-gap: 30px;
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: #1A71DF;
+  width: 100%;
+}
+.AdobeXD1 h3{
+  font-size: 3rem;
+  font-weight: 700;
+}
+.AdobeXD1 h4{
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.btns .free{
+  background-color: #ffff;
+  color: #0044A9;
+}
+.AdobeXD .btn2{
+  border: 4px solid black;
+}
+.trusted{
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 20px;
+}
+.trusted h2{
+  font-size: 2rem;
+}
+.equinox{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.twelve{
+  margin-bottom: 12rem;
+}
+.powerful{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+}
+.photoshop img{
+  width: 100%;
+}
+.creative h2{
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 20px 0;
+}
+.creative h3{
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: justify;
+  word-spacing: -1px;
+  width: 80%;
+}
+.thirteen{
+  display: grid;
+  justify-items: center;
+  margin-bottom: 10rem;
+}
+.behance{
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+.resize{
+  width: 100%;
+}
+.block{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-end;
+  text-align: right;
+}
+.block h2{
+  font-size: 4.6rem;
+  color: #2F3857;
+}
+.block h3{
+  font-size: 2rem;
+  color: #2F3857;
+  font-weight: 500;
+}
+.block a{
+  font-size: 1.6rem;
+  color: #2F3857;
+  font-weight: 500;
+  color: #1473E6;
+}
+.fourteen{
+  margin-bottom: 7rem;
+}
+.design{
+  display: grid;
+  grid-gap: 30px;
+  width: 80%;
+  margin: 0 auto;
+  justify-items: center;
+}
+.design img{
+  width: 100%;
+}
+.design h2{
+  font-size: 5rem;
+  color: #2F3857;
+  font-weight: 600;
+}
+.design .btns{
+  padding: 10px;
+}
+.design button{
+  font-size: 1.6rem;
+  padding: 8px 15px;
+}
+.btns .fre{
+  color: #2F3857;
+  border: 2px solid #2F3857;
+  background-color: #ffff;
+}
+.fifteen{
+  display: grid;
+  justify-items: center;
+  margin-bottom: 10rem;
+}
+.cameo{
+  width: 60%;
+  margin: auto;
+  display: grid;
+  justify-items: center;
+  grid-gap: 30px;
+  text-align: center;
+}
+.fifteen img{
+  width: 13%;
+  height: auto;
+}
+.cameo h2{
+  font-size: 4.3rem;
+}
+.cameo h3{
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #2F3857;
+}
+.cameo a{
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #1473E7;
+  text-decoration: none;
+}
+article{
+  width: 60%;
+  height: 8vh;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-top: 1px solid black;
+  display: grid;
+  align-items: center;
+}
+article span{
+  padding: 10px;
+  font-size: 1.9rem;
+}
+article:hover{
+  background-color: #FAFAFA;
+}
+.line-break{
+  margin-bottom: 7rem;
+  background: linear-gradient(90deg, rgb(255, 170, 9) 0%, rgb(177, 213, 51) 35%, 
+  rgba(132, 237, 202, 1)
+    100%);
+  height: 5vh;
+}
+.sixteen{
+  margin-bottom: 10rem;
+}
+.drop-down{
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+.drop-down h3{
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.drop-down .uil{
+  font-size: 1.8rem;
+}
+.final{
+  margin-bottom: 7rem;
+}
+.downloads{
+  width: 55%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  width: 50%;
+  justify-content: space-between;
 }
-.adobe{
+.reader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.downloads h3{
+  width: 60%;
   font-size: 1.4rem;
-  width: 50%;
+  text-align: center;
 }
-.google img{
-  width: 95%;
+.reader img{
+  width: 13%;
+  margin: 5px;
 }
-.apple img{
-  width: 95%;
+.reader p{
+  font-size: 1.2rem;
 }
+footer{
+  display: flex;
+  
+}
+footer a{
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #808080;
+}
+footer .uil{
+  font-size: 2.3rem;
+  padding: 0 5px;
+}
+.sm{
+  padding: 0 1.9rem;
+}
+.debian{
+  padding: 8px;
+  font-size: 1.1rem;
+  color: #808080;
+}
+.kali a{
+  font-size: 1.1rem;
+  padding: 1.1rem;
+  text-decoration: none;
+  color: #313133;
+}
+.kali .uil{
+  font-size: 1.6rem;
+}
+
+
+@media only screen and (max-width: 966px) {
+  .navbar1{
+    height: 20vh;
+  }
+  .header2{
+    width: 100%;
+  height: 20vh;
+  }
+  .header2 ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header2 button{
+    width: 100%;
+  }
+  .video-section{
+    height: 80%;
+  }
+  .text-section h2{
+    font-size: 4rem;
+    font-weight: 600;
+  }
+  .googleapple{
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+  .adobe{
+    font-size: 1.4rem;
+    width: 50%;
+  }
+  .google img{
+    width: 95%;
+  }
+  .apple img{
+    width: 95%;
+  }
+ .ready h2{
+    font-size: 4.5rem;
+    font-weight: 600;
+  }
+ .ready h3{
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+  .AdobeXD h3{
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .AdobeXD1 h3{
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .publicis{
+    width: 8rem;
+  }
+  .powerful{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .creative h2{
+    font-size: 3rem;
+    color: #2F3857;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .creative h3{
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 90%;
+    letter-spacing: -1px;
+  }
 }
 
 @media only screen and (max-width: 568px) {
@@ -501,8 +850,83 @@ h3.keluskar{
   font-size: 1.6rem;
   font-weight: 500;
   }
+  .mainboxes{
+    width: 100%;
+    margin: 0 auto;
+    height: 200vh;
+    border: 5px solid green;
+  }
+  .ready h2{
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
   .boxes{
     display: grid;
     grid-template-columns: 1fr;
   }
+  .twoboxes{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    border: 5px solid red;
+    width: 100%;
+    height: 100%;
+  }
+  .equinox{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    justify-items: center;
+  }
+  .trusted{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 20px;
+  }
+  .trusted h2{
+    font-size: 1.9rem;
+  }
+  .publicis{
+    width: 13rem;
+  }
+  .powerful{
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  .creative h3{
+    max-width: 100%;
+    letter-spacing: -0.6px;
+    word-spacing: 2px;
+  }
+  .behance{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .design h2{
+    font-size: 3rem;
+    color: #2F3857;
+    font-weight: 700;
+  }
+  .fifteen img{
+    width: 30%;
+    height: auto;
+  }
+  .cameo h2{
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+  .final{
+    display: none;
+  }
+}
+@media only screen and (max-width: 360px){
+
 }
